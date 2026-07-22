@@ -561,6 +561,10 @@ nav a:not(.nav-contact):hover {
 	display: none;
 }
 
+.project--hotel .project-cover {
+	object-position: center 18%;
+}
+
 .project:hover .project-visual::before {
 	transform: translateX(70%);
 }

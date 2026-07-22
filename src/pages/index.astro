@@ -2,6 +2,11 @@
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { Image } from 'astro:assets';
+import hcEvent from '../assets/hc/event-coverage.jpeg';
+import hcHotel from '../assets/hc/hotel-space.jpeg';
+import hcOnCamera from '../assets/hc/on-camera.jpeg';
+import hcInterview from '../assets/hc/street-interview.jpeg';
+import hcTrend from '../assets/hc/trend-story.jpeg';
 import lvBody from '../assets/lv/body-campaign.webp';
 import lvLaser from '../assets/lv/laser-campaign.webp';
 import lvMyth from '../assets/lv/myth-reality.webp';
@@ -22,13 +27,24 @@ const projects = [
 	},
 	{
 		number: '02',
+		client: 'Hotel Carrión',
+		title: 'El hotel dejó de ser escenario y empezó a tener rostro.',
+		type: 'Contenido para TikTok · Talento frente a cámara',
+		className: 'project--hotel project--real',
+		image: hcOnCamera,
+		alt: 'Ana Paulina presentando contenido para Hotel Carrión',
+		description: 'Protagonismo frente a cámara, grabación en instalaciones y exteriores, adaptación de tendencias y edición dinámica para la campaña de TikTok del hotel.',
+		results: ['8 piezas para TikTok', 'Frente a cámara', 'Grabación + edición'],
+	},
+	{
+		number: '03',
 		client: 'FORED',
 		title: 'Una campaña pequeña con un resultado enorme.',
 		type: 'Producción audiovisual · Paid media',
 		className: 'project--campaign',
 	},
 	{
-		number: '03',
+		number: '04',
 		client: 'Emobility',
 		title: 'Tecnología convertida en una historia humana.',
 		type: 'Contenido digital · Video',
@@ -42,6 +58,11 @@ const visualFrames = [
 	{ image: lvBody, label: 'Diseño promocional', alt: 'Arte publicitario de tratamiento corporal para LV Estética Avanzada' },
 	{ image: lvPigmentation, label: 'Contenido educativo', alt: 'Arte informativo de despigmentación para LV Estética Avanzada' },
 	{ image: lvMyth, label: 'Estrategia editorial', alt: 'Arte educativo de mito y realidad para LV Estética Avanzada' },
+	{ image: hcOnCamera, label: 'Frente a cámara', alt: 'Ana Paulina presentando un video para Hotel Carrión' },
+	{ image: hcTrend, label: 'Adaptación de tendencias', alt: 'Contenido de tendencia protagonizado por el equipo del Hotel Carrión' },
+	{ image: hcEvent, label: 'Cobertura de eventos', alt: 'Cobertura audiovisual de un evento en Hotel Carrión' },
+	{ image: hcHotel, label: 'Recorrido de espacios', alt: 'Contenido audiovisual de los espacios del Hotel Carrión' },
+	{ image: hcInterview, label: 'Entrevistas', alt: 'Entrevista en cámara para contenido del Hotel Carrión' },
 ];
 ---
 
