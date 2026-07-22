@@ -5,12 +5,14 @@ import { Image } from 'astro:assets';
 import hcEvent from '../assets/hc/event-coverage.jpeg';
 import hcHotel from '../assets/hc/hotel-space.jpeg';
 import hcOnCamera from '../assets/hc/on-camera.jpeg';
+import hcCover from '../assets/hc/project-cover.png';
 import hcInterview from '../assets/hc/street-interview.jpeg';
 import hcTrend from '../assets/hc/trend-story.jpeg';
 import lvBody from '../assets/lv/body-campaign.webp';
 import lvLaser from '../assets/lv/laser-campaign.webp';
 import lvMyth from '../assets/lv/myth-reality.webp';
 import lvPigmentation from '../assets/lv/pigmentation-content.webp';
+import lvCover from '../assets/lv/project-cover.png';
 import lvSkin from '../assets/lv/skin-conscious.webp';
 
 const projects = [
@@ -19,9 +21,9 @@ const projects = [
 		client: 'LV Lolita Vintimilla',
 		title: 'Belleza que se comunica con intención.',
 		type: 'Dirección de contenido · Identidad visual',
-		className: 'project--beauty project--real',
-		image: lvSkin,
-		alt: 'Arte de cuidado facial diseñado para LV Estética Avanzada',
+		className: 'project--beauty project--real project--cover',
+		image: lvCover,
+		alt: 'Portada del proyecto LV Estética Avanzada con Lolita Vintimilla',
 		description: 'Publicidad, diseño de artes, estrategia editorial y gestión diaria de redes sociales para construir una presencia coherente y educativa.',
 		results: ['+412% visualizaciones', '13,6 mil en 30 días', '+1.384% alcance nuevo'],
 	},
@@ -30,9 +32,9 @@ const projects = [
 		client: 'Hotel Carrión',
 		title: 'El hotel dejó de ser escenario y empezó a tener rostro.',
 		type: 'Contenido para TikTok · Talento frente a cámara',
-		className: 'project--hotel project--real',
-		image: hcOnCamera,
-		alt: 'Ana Paulina presentando contenido para Hotel Carrión',
+		className: 'project--hotel project--real project--cover',
+		image: hcCover,
+		alt: 'Portada del proyecto Hotel Carrión con Ana Paulina frente a cámara',
 		description: 'Protagonismo frente a cámara, grabación en instalaciones y exteriores, adaptación de tendencias y edición dinámica para la campaña de TikTok del hotel.',
 		results: ['8 piezas para TikTok', 'Frente a cámara', 'Grabación + edición'],
 	},

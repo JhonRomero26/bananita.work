@@ -561,8 +561,9 @@ nav a:not(.nav-contact):hover {
 	display: none;
 }
 
-.project--hotel .project-cover {
-	object-position: center 18%;
+.project--cover .project-visual {
+	min-height: 0;
+	aspect-ratio: 4 / 3;
 }
 
 .project:hover .project-visual::before {
