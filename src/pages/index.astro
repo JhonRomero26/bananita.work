@@ -1,49 +1,253 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { Image } from 'astro:assets';
+import lvBody from '../assets/lv/body-campaign.webp';
+import lvLaser from '../assets/lv/laser-campaign.webp';
+import lvMyth from '../assets/lv/myth-reality.webp';
+import lvPigmentation from '../assets/lv/pigmentation-content.webp';
+import lvSkin from '../assets/lv/skin-conscious.webp';
+
+const projects = [
+	{
+		number: '01',
+		client: 'LV Lolita Vintimilla',
+		title: 'Belleza que se comunica con intención.',
+		type: 'Dirección de contenido · Identidad visual',
+		className: 'project--beauty project--real',
+		image: lvSkin,
+		alt: 'Arte de cuidado facial diseñado para LV Estética Avanzada',
+		description: 'Publicidad, diseño de artes, estrategia editorial y gestión diaria de redes sociales para construir una presencia coherente y educativa.',
+		results: ['+412% visualizaciones', '13,6 mil en 30 días', '+1.384% alcance nuevo'],
+	},
+	{
+		number: '02',
+		client: 'FORED',
+		title: 'Una campaña pequeña con un resultado enorme.',
+		type: 'Producción audiovisual · Paid media',
+		className: 'project--campaign',
+	},
+	{
+		number: '03',
+		client: 'Emobility',
+		title: 'Tecnología convertida en una historia humana.',
+		type: 'Contenido digital · Video',
+		className: 'project--motion',
+	},
+];
+
+const visualFrames = [
+	{ image: lvSkin, label: 'Narrativa de marca', alt: 'Arte de belleza consciente para LV Estética Avanzada' },
+	{ image: lvLaser, label: 'Campaña de servicio', alt: 'Arte publicitario de depilación para LV Estética Avanzada' },
+	{ image: lvBody, label: 'Diseño promocional', alt: 'Arte publicitario de tratamiento corporal para LV Estética Avanzada' },
+	{ image: lvPigmentation, label: 'Contenido educativo', alt: 'Arte informativo de despigmentación para LV Estética Avanzada' },
+	{ image: lvMyth, label: 'Estrategia editorial', alt: 'Arte educativo de mito y realidad para LV Estética Avanzada' },
+];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<meta name="theme-color" content="#160d0c" />
 	</head>
 	<body>
-		<Header />
+		<div class="grain" aria-hidden="true"></div>
+		<div class="cursor-light" aria-hidden="true"></div>
+
+		<header class="site-header">
+			<a class="monogram" href="#inicio" aria-label="Ir al inicio">AP</a>
+			<nav aria-label="Navegación principal">
+				<a href="#trabajo">Trabajo</a>
+				<a href="#perfil">Perfil</a>
+				<a class="nav-contact" href="#contacto">Hablemos</a>
+			</nav>
+		</header>
+
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero" id="inicio" aria-labelledby="hero-title">
+				<p class="hero-name" aria-hidden="true">ANA PAULINA</p>
+				<div class="hero-kicker reveal">
+					<span>Dirección creativa</span>
+					<span>Loja · Ecuador</span>
+				</div>
+				<h1 id="hero-title" class="reveal">
+					<span>Ideas que</span>
+					<span class="hero-accent">se sienten.</span>
+				</h1>
+				<div class="hero-footer reveal">
+					<p>Creo universos visuales para marcas que quieren dejar de verse como todas las demás.</p>
+					<a class="round-link" href="#trabajo" aria-label="Descubrir proyectos">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m0 0 6-6m-6 6-6-6"></path></svg>
+					</a>
+				</div>
+				<div class="hero-orbit" aria-hidden="true"><span>CONTENIDO · ESTRATEGIA · DISEÑO · </span></div>
+			</section>
+
+			<section class="manifesto section-pad" id="perfil">
+				<p class="eyebrow reveal">Mi forma de crear</p>
+				<div class="manifesto-grid">
+					<h2 class="reveal">No lleno espacios.<br /><em>Construyo presencia.</em></h2>
+					<div class="manifesto-copy reveal">
+						<p>Soy Ana Paulina, creadora de contenido y gestora de redes sociales. Convierto ideas en imágenes, ritmo y mensajes que las personas recuerdan.</p>
+						<p>Desde la estrategia hasta la edición final, diseño cada pieza para que una marca se vea coherente, humana y difícil de ignorar.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="scroll-gallery" aria-labelledby="gallery-title">
+				<div class="gallery-heading">
+					<p class="eyebrow">Universo visual</p>
+					<h2 id="gallery-title">Ideas en<br /><em>movimiento.</em></h2>
+				</div>
+				<div class="gallery-window">
+					{[0, 1].map((rowIndex) => (
+						<div class={`gallery-track ${rowIndex ? 'gallery-track--reverse' : ''}`} aria-hidden={rowIndex ? 'true' : undefined}>
+							{[false, true].map((duplicate) => (
+								<div class="gallery-set" aria-hidden={duplicate ? 'true' : undefined}>
+									{visualFrames.map((frame, index) => (
+										<figure class={`gallery-frame gallery-frame--${index + 1}`}>
+											<Image src={frame.image} alt={rowIndex || duplicate ? '' : frame.alt} width={420} height={520} loading="lazy" />
+											<figcaption><span>0{index + 1}</span>{frame.label}</figcaption>
+										</figure>
+									))}
+								</div>
+							))}
+						</div>
+					))}
+				</div>
+			</section>
+
+			<section class="work section-pad" id="trabajo" aria-labelledby="work-title">
+				<div class="section-heading reveal">
+					<p class="eyebrow">Selección de trabajo</p>
+					<h2 id="work-title">Proyectos con<br />pulso propio.</h2>
+				</div>
+
+				<div class="project-list">
+					{projects.map((project) => (
+						<article class={`project reveal ${project.className}`}>
+							<div class="project-visual" aria-hidden="true">
+								{project.image && <Image class="project-cover" src={project.image} alt={project.alt} width={900} height={1125} loading="lazy" />}
+								<span class="project-number">{project.number}</span>
+								<div class="visual-mark"></div>
+								<span class="visual-word">{project.client}</span>
+							</div>
+							<div class="project-info">
+								<p>{project.type}</p>
+								<h3>{project.title}</h3>
+								{project.description && <div class="project-description">{project.description}</div>}
+								{project.results && (
+									<div class="project-results">
+										{project.results.map((result) => <span>{result}</span>)}
+									</div>
+								)}
+								<span class="project-client">{project.client}</span>
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section class="cinematic-break" aria-label="Filosofía creativa">
+				<div class="cinematic-copy reveal">
+					<span>Imaginar.</span>
+					<strong>Crear.</strong>
+					<span>Impactar.</span>
+				</div>
+				<p class="cinematic-note reveal">Cada marca tiene algo que decir.<br />Mi trabajo es hacer que nadie pueda ignorarlo.</p>
+				<div class="marquee" aria-hidden="true">
+					<div>ESTRATEGIA · CONTENIDO · DISEÑO · MOVIMIENTO · ESTRATEGIA · CONTENIDO · DISEÑO · MOVIMIENTO ·</div>
+				</div>
+			</section>
+
+			<section class="impact section-pad" aria-label="Resultados destacados">
+				<div class="impact-intro reveal">
+					<p class="eyebrow">Cuando la creatividad funciona</p>
+					<p>Una buena idea no solo se ve bien.<br />También mueve números.</p>
+				</div>
+				<div class="metrics">
+					<div class="metric reveal"><strong>240K</strong><span>reproducciones en una pieza para Emobility</span></div>
+					<div class="metric reveal"><strong>$12</strong><span>de inversión con rendimiento comparable a $90</span></div>
+					<div class="metric reveal"><strong>360°</strong><span>estrategia, grabación, diseño, copy y edición</span></div>
+				</div>
+			</section>
+
+			<section class="services section-pad" aria-labelledby="services-title">
+				<p class="eyebrow reveal">Lo que hago</p>
+				<h2 id="services-title" class="sr-only">Servicios creativos</h2>
+				<ul>
+					<li class="reveal"><span>01</span>Dirección de contenido</li>
+					<li class="reveal"><span>02</span>Producción audiovisual</li>
+					<li class="reveal"><span>03</span>Identidad visual & diseño</li>
+					<li class="reveal"><span>04</span>Estrategia para redes</li>
+					<li class="reveal"><span>05</span>Copywriting</li>
+				</ul>
+				<p class="tools reveal">CapCut · InShot · Canva · Premiere Pro · Photoshop</p>
+			</section>
+
+			<section class="contact section-pad" id="contacto">
+				<p class="eyebrow reveal">¿Creamos algo inolvidable?</p>
+				<a class="contact-title reveal" href="mailto:ana.sarmiento26@hotmail.com">
+					Cuéntame<br /><em>tu idea.</em>
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
+				</a>
+				<div class="contact-meta reveal">
+					<a href="mailto:ana.sarmiento26@hotmail.com">ana.sarmiento26@hotmail.com</a>
+					<a href="tel:+593994195423">+593 99 419 5423</a>
+					<span>Loja, Ecuador</span>
+				</div>
+			</section>
 		</main>
-		<Footer />
+
+		<footer>
+			<span>© {new Date().getFullYear()} Ana Paulina</span>
+			<span>Contenido · Estrategia · Diseño</span>
+			<a href="#inicio">Volver arriba ↑</a>
+		</footer>
+
+		<script>
+			const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			const reveals = document.querySelectorAll('.reveal');
+
+			if (reducedMotion) {
+				reveals.forEach((element) => element.classList.add('is-visible'));
+			} else {
+				const observer = new IntersectionObserver(
+					(entries) => entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('is-visible');
+							observer.unobserve(entry.target);
+						}
+					}),
+					{ threshold: 0.12 },
+				);
+				reveals.forEach((element) => observer.observe(element));
+
+				const light = document.querySelector<HTMLElement>('.cursor-light');
+				const galleries = document.querySelectorAll<HTMLElement>('.gallery-track');
+				let galleryFrame = 0;
+				const moveGallery = () => {
+					galleryFrame = 0;
+					galleries.forEach((gallery, index) => {
+						const loopWidth = gallery.scrollWidth / 2;
+						if (!loopWidth) return;
+						const progress = (window.scrollY * 0.32) % loopWidth;
+						const offset = index ? -loopWidth + progress : -progress;
+						gallery.style.setProperty('--gallery-x', `${offset}px`);
+					});
+				};
+				const requestGalleryMove = () => {
+					if (!galleryFrame) galleryFrame = requestAnimationFrame(moveGallery);
+				};
+				moveGallery();
+				window.addEventListener('scroll', requestGalleryMove, { passive: true });
+				window.addEventListener('resize', requestGalleryMove, { passive: true });
+				window.addEventListener('pointermove', (event) => {
+					light?.style.setProperty('--x', `${event.clientX}px`);
+					light?.style.setProperty('--y', `${event.clientY}px`);
+				}, { passive: true });
+			}
+		</script>
 	</body>
 </html>
