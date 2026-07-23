@@ -257,6 +257,22 @@ const stripRowB = [emPromo, lvMyth, hcTrend, emBrand, lvBody];
 				);
 				items.forEach((el) => io.observe(el));
 			}
+
+			const hero = document.querySelector<HTMLElement>('.hero');
+			if (hero && !reduce) {
+				let frame = 0;
+				hero.addEventListener('pointermove', (event) => {
+					if (frame) return;
+					frame = requestAnimationFrame(() => {
+						const rect = hero.getBoundingClientRect();
+						const x = ((event.clientX - rect.left) / rect.width) * 100;
+						const y = ((event.clientY - rect.top) / rect.height) * 100;
+						hero.style.setProperty('--mx', `${x}%`);
+						hero.style.setProperty('--my', `${y}%`);
+						frame = 0;
+					});
+				});
+			}
 		</script>
 	</body>
 </html>
