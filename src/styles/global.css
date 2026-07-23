@@ -250,13 +250,8 @@ section {
 	overflow: hidden;
 }
 
-.strip-row-a {
-	transform: rotate(-4deg) scale(1.08);
-}
-
 .strip-row-b {
 	margin-top: clamp(1.4rem, 3vw, 2.4rem);
-	transform: rotate(4deg) scale(1.08);
 }
 
 .strip-track {
