@@ -239,30 +239,56 @@ section {
 
 /* strip */
 .strip {
-	padding: clamp(1.4rem, 3vw, 2.2rem) 0;
+	padding: clamp(2.2rem, 5vw, 3.5rem) 0;
 	border-top: 1px solid var(--line);
 	border-bottom: 1px solid var(--line);
 	overflow: hidden;
 	background: var(--panel);
 }
 
+.strip-row {
+	overflow: hidden;
+	transform: rotate(-2.5deg) scale(1.06);
+}
+
+.strip-row + .strip-row {
+	margin-top: clamp(1.2rem, 2.5vw, 2rem);
+	transform: rotate(2.5deg) scale(1.06);
+}
+
 .strip-track {
 	display: flex;
-	gap: 1rem;
+	gap: 1.2rem;
 	width: max-content;
-	animation: slide 45s linear infinite;
+}
+
+.strip-row-a .strip-track {
+	animation: slide-left 40s linear infinite;
+}
+
+.strip-row-b .strip-track {
+	animation: slide-right 40s linear infinite;
 }
 
 .strip img {
-	height: clamp(6rem, 10vw, 9rem);
+	height: clamp(9rem, 15vw, 14rem);
 	width: auto;
-	border-radius: 12px;
+	border-radius: 14px;
 	object-fit: cover;
 }
 
-@keyframes slide {
+@keyframes slide-left {
 	to {
 		transform: translateX(-50%);
+	}
+}
+
+@keyframes slide-right {
+	from {
+		transform: translateX(-50%);
+	}
+	to {
+		transform: translateX(0);
 	}
 }
 

@@ -52,7 +52,8 @@ const projects = [
 	},
 ];
 
-const strip = [lvSkin, hcOnCamera, emScooter, lvLaser, hcEvent, emPromo, lvMyth, hcTrend, emBrand, lvBody];
+const stripRowA = [lvSkin, hcOnCamera, emScooter, lvLaser, hcEvent];
+const stripRowB = [emPromo, lvMyth, hcTrend, emBrand, lvBody];
 ---
 
 <!doctype html>
@@ -92,10 +93,19 @@ const strip = [lvSkin, hcOnCamera, emScooter, lvLaser, hcEvent, emPromo, lvMyth,
 			</section>
 
 			<div class="strip" aria-hidden="true">
-				<div class="strip-track">
-					{[...strip, ...strip].map((img) => (
-						<Image src={img} alt="" widths={[160, 320]} sizes="160px" quality={80} loading="lazy" />
-					))}
+				<div class="strip-row strip-row-a">
+					<div class="strip-track">
+						{[...stripRowA, ...stripRowA].map((img) => (
+							<Image src={img} alt="" widths={[220, 440]} sizes="220px" quality={82} loading="lazy" />
+						))}
+					</div>
+				</div>
+				<div class="strip-row strip-row-b">
+					<div class="strip-track">
+						{[...stripRowB, ...stripRowB].map((img) => (
+							<Image src={img} alt="" widths={[220, 440]} sizes="220px" quality={82} loading="lazy" />
+						))}
+					</div>
 				</div>
 			</div>
 
