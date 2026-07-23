@@ -6,275 +6,202 @@ import emBrand from '../assets/em/brand.jpeg';
 import emCover from '../assets/em/cover.jpeg';
 import emPromo from '../assets/em/promo.jpeg';
 import emScooter from '../assets/em/scooter.jpeg';
-import emTestdrive from '../assets/em/testdrive.jpeg';
 import hcEvent from '../assets/hc/event-coverage.jpeg';
-import hcHotel from '../assets/hc/hotel-space.jpeg';
 import hcOnCamera from '../assets/hc/on-camera.jpeg';
-import hcInterview from '../assets/hc/street-interview.jpeg';
 import hcTrend from '../assets/hc/trend-story.jpeg';
 import lvBody from '../assets/lv/body-campaign.webp';
 import lvLaser from '../assets/lv/laser-campaign.webp';
 import lvMyth from '../assets/lv/myth-reality.webp';
-import lvPigmentation from '../assets/lv/pigmentation-content.webp';
 import lvSkin from '../assets/lv/skin-conscious.webp';
 
 const projects = [
 	{
-		number: '01',
-		client: 'LV Lolita Vintimilla',
-		title: 'Belleza que se comunica con intención.',
-		type: 'Dirección de contenido · Identidad visual',
-		className: 'project--beauty project--real',
+		tag: 'Contenido · Identidad visual',
+		title: 'LV Estética Avanzada',
+		blurb: 'Publicidad, diseño de artes, estrategia editorial y gestión diaria de redes para una estética no invasiva y consciente.',
+		chips: ['+412% visualizaciones', '13,6 mil / 30 días', '+1.384% alcance'],
 		image: lvSkin,
-		alt: 'Arte de cuidado facial diseñado para LV Estética Avanzada',
-		description: 'Publicidad, diseño de artes, estrategia editorial y gestión diaria de redes sociales para construir una presencia coherente y educativa.',
-		results: ['+412% visualizaciones', '13,6 mil en 30 días', '+1.384% alcance nuevo'],
-		social: { label: 'Instagram', handle: '@lv_estetica_avanzada_', href: 'https://www.instagram.com/lv_estetica_avanzada_/' },
+		alt: 'Arte de cuidado facial para LV Estética Avanzada',
+		social: { label: 'Instagram', href: 'https://www.instagram.com/lv_estetica_avanzada_/' },
 	},
 	{
-		number: '02',
-		client: 'Hotel Carrión',
-		title: 'El hotel dejó de ser escenario y empezó a tener rostro.',
-		type: 'Contenido para TikTok · Talento frente a cámara',
-		className: 'project--hotel project--real',
+		tag: 'TikTok · Frente a cámara',
+		title: 'Hotel Carrión',
+		blurb: 'Talento frente a cámara, grabación en instalaciones y exteriores, y edición dinámica para la campaña de TikTok del hotel.',
+		chips: ['8 TikToks', 'Grabación', 'Edición'],
 		image: hcOnCamera,
 		alt: 'Ana Paulina presentando contenido para Hotel Carrión',
-		description: 'Protagonismo frente a cámara, grabación en instalaciones y exteriores, adaptación de tendencias y edición dinámica para la campaña de TikTok del hotel.',
-		results: ['8 piezas para TikTok', 'Frente a cámara', 'Grabación + edición'],
-		social: { label: 'TikTok', handle: '@hotelcarrionloja', href: 'https://www.tiktok.com/@hotelcarrionloja' },
+		social: { label: 'TikTok', href: 'https://www.tiktok.com/@hotelcarrionloja' },
 	},
 	{
-		number: '03',
-		client: 'FORED',
-		title: 'Una campaña pequeña con un resultado enorme.',
-		type: 'Producción audiovisual · Paid media',
-		className: 'project--campaign',
-	},
-	{
-		number: '04',
-		client: 'Emobility',
-		title: 'Tecnología convertida en una historia humana.',
-		type: 'Comunicación digital · Foto y video',
-		className: 'project--motion project--real',
+		tag: 'Foto y video · Comunicación',
+		title: 'Emobility',
+		blurb: 'Producción y edición de fotografías y videos para comunicar productos de movilidad eléctrica de forma clara y cercana.',
+		chips: ['240K reproducciones', 'Foto + video'],
 		image: emCover,
 		alt: 'Contenido de promoción de movilidad eléctrica para Emobility',
-		description: 'Producción y edición de fotografías y videos, y comunicación clara de productos de movilidad eléctrica para acercar la marca a más público.',
-		results: ['240K reproducciones', 'Foto + video', 'Comunicación de producto'],
-		social: { label: 'TikTok', handle: '@emobilityloja', href: 'https://www.tiktok.com/@emobilityloja' },
+		social: { label: 'TikTok', href: 'https://www.tiktok.com/@emobilityloja' },
+	},
+	{
+		tag: 'Producción · Paid media',
+		title: 'FORED',
+		blurb: 'Producción de contenido y optimización de pauta digital: un resultado comparable a una campaña de $90 con una inversión de ~$12.',
+		chips: ['$12 ≈ $90', 'Proyecto de 1 mes'],
+		big: '$12',
 	},
 ];
 
-const visualFrames = [
-	{ image: lvSkin, label: 'Narrativa de marca', alt: 'Arte de belleza consciente para LV Estética Avanzada' },
-	{ image: lvLaser, label: 'Campaña de servicio', alt: 'Arte publicitario de depilación para LV Estética Avanzada' },
-	{ image: lvBody, label: 'Diseño promocional', alt: 'Arte publicitario de tratamiento corporal para LV Estética Avanzada' },
-	{ image: lvPigmentation, label: 'Contenido educativo', alt: 'Arte informativo de despigmentación para LV Estética Avanzada' },
-	{ image: lvMyth, label: 'Estrategia editorial', alt: 'Arte educativo de mito y realidad para LV Estética Avanzada' },
-	{ image: hcOnCamera, label: 'Frente a cámara', alt: 'Ana Paulina presentando un video para Hotel Carrión' },
-	{ image: hcTrend, label: 'Adaptación de tendencias', alt: 'Contenido de tendencia protagonizado por el equipo del Hotel Carrión' },
-	{ image: hcEvent, label: 'Cobertura de eventos', alt: 'Cobertura audiovisual de un evento en Hotel Carrión' },
-	{ image: hcHotel, label: 'Recorrido de espacios', alt: 'Contenido audiovisual de los espacios del Hotel Carrión' },
-	{ image: hcInterview, label: 'Entrevistas', alt: 'Entrevista en cámara para contenido del Hotel Carrión' },
-	{ image: emScooter, label: 'Producto en acción', alt: 'Video de un scooter eléctrico ES2 en movimiento para Emobility' },
-	{ image: emPromo, label: 'Campaña de temporada', alt: 'Contenido de promoción navideña de movilidad eléctrica para Emobility' },
-	{ image: emTestdrive, label: 'Prueba de manejo', alt: 'Contenido de prueba de manejo de un vehículo eléctrico para Emobility' },
-	{ image: emBrand, label: 'Voz de marca', alt: 'Presentador comunicando productos de Emobility' },
-];
+const strip = [lvSkin, hcOnCamera, emScooter, lvLaser, hcEvent, emPromo, lvMyth, hcTrend, emBrand, lvBody];
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<meta name="theme-color" content="#160d0c" />
+		<meta name="theme-color" content="#140d0c" />
 	</head>
 	<body>
-		<div class="grain" aria-hidden="true"></div>
-		<div class="cursor-light" aria-hidden="true"></div>
-
-		<header class="site-header">
-			<a class="monogram" href="#inicio" aria-label="Ir al inicio">AP</a>
-			<nav aria-label="Navegación principal">
-				<a href="#trabajo">Trabajo</a>
-				<a href="#perfil">Perfil</a>
-				<a class="nav-contact" href="#contacto">Hablemos</a>
-			</nav>
-		</header>
-
-		<main>
-			<section class="hero" id="inicio" aria-labelledby="hero-title">
-				<p class="hero-name" aria-hidden="true">ANA PAULINA</p>
-				<div class="hero-kicker reveal">
-					<span>Dirección creativa</span>
-					<span>Loja · Ecuador</span>
+		<nav class="site">
+			<div class="wrap">
+				<a class="brand" href="#top">Ana Paulina<span>.</span></a>
+				<div class="nav-links">
+					<a href="#trabajo">Trabajo</a>
+					<a href="#perfil">Perfil</a>
+					<a href="#servicios">Servicios</a>
+					<a class="nav-cta" href="#contacto">Hablemos</a>
 				</div>
-				<h1 id="hero-title" class="reveal">
-					<span>Ideas que</span>
-					<span class="hero-accent">se sienten.</span>
-				</h1>
-				<div class="hero-footer reveal">
-					<p>Creo universos visuales para marcas que quieren dejar de verse como todas las demás.</p>
-					<a class="round-link" href="#trabajo" aria-label="Descubrir proyectos">
-						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m0 0 6-6m-6 6-6-6"></path></svg>
-					</a>
+			</div>
+		</nav>
+
+		<main id="top">
+			<section class="hero">
+				<div class="wrap">
+					<span class="eyebrow">Creadora de contenido · Loja, Ecuador</span>
+					<h1>Contenido que <em>conecta</em> marcas con personas.</h1>
+					<p class="hero-lead">
+						Soy Ana Paulina Sarmiento. Planifico, grabo, edito y publico contenido audiovisual
+						y gestiono redes sociales para que las marcas se vean claras, humanas y difíciles de ignorar.
+					</p>
+					<div class="hero-actions">
+						<a class="btn btn-primary" href="#trabajo">Ver trabajo</a>
+						<a class="btn btn-ghost" href="#contacto">Trabajemos juntos</a>
+					</div>
+					<p class="hero-clients">Marcas — LV Estética · Hotel Carrión · Emobility · FORED</p>
 				</div>
-				<div class="hero-orbit" aria-hidden="true"><span>CONTENIDO · ESTRATEGIA · DISEÑO · </span></div>
 			</section>
 
-			<section class="manifesto section-pad" id="perfil">
-				<p class="eyebrow reveal">Mi forma de crear</p>
-				<div class="manifesto-grid">
-					<h2 class="reveal">No lleno espacios.<br /><em>Construyo presencia.</em></h2>
-					<div class="manifesto-copy reveal">
-						<p>Soy Ana Paulina, creadora de contenido y gestora de redes sociales. Convierto ideas en imágenes, ritmo y mensajes que las personas recuerdan.</p>
-						<p>Desde la estrategia hasta la edición final, diseño cada pieza para que una marca se vea coherente, humana y difícil de ignorar.</p>
+			<div class="strip" aria-hidden="true">
+				<div class="strip-track">
+					{[...strip, ...strip].map((img) => (
+						<Image src={img} alt="" widths={[160, 320]} sizes="160px" quality={80} loading="lazy" />
+					))}
+				</div>
+			</div>
+
+			<section id="trabajo">
+				<div class="wrap">
+					<div class="sec-head reveal">
+						<span class="eyebrow">Selección de trabajo</span>
+						<h2>Proyectos reales, resultados reales.</h2>
+						<p>Casos donde dirigí o produje el contenido y acompañé la comunicación de cada marca.</p>
+					</div>
+
+					<div class="work-grid">
+						{projects.map((project) => (
+							<article class="card reveal">
+								<div class={`card-media ${project.image ? '' : 'no-img'}`}>
+									{project.image ? (
+										<Image src={project.image} alt={project.alt} widths={[400, 700]} sizes="(max-width: 720px) 100vw, 45vw" quality={88} loading="lazy" />
+									) : (
+										<span class="big">{project.big}</span>
+									)}
+								</div>
+								<div class="card-body">
+									<span class="card-tag">{project.tag}</span>
+									<h3>{project.title}</h3>
+									<p>{project.blurb}</p>
+									<div class="chips">
+										{project.chips.map((chip) => <span class="chip">{chip}</span>)}
+									</div>
+									{project.social && (
+										<a class="card-link" href={project.social.href} target="_blank" rel="noopener noreferrer">
+											{project.social.label}
+											<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+										</a>
+									)}
+								</div>
+							</article>
+						))}
 					</div>
 				</div>
 			</section>
 
-			<section class="scroll-gallery" aria-labelledby="gallery-title">
-				<div class="gallery-heading">
-					<p class="eyebrow">Universo visual</p>
-					<h2 id="gallery-title">Ideas en<br /><em>movimiento.</em></h2>
-				</div>
-				<div class="gallery-window">
-					{[0, 1].map((rowIndex) => (
-						<div class={`gallery-track ${rowIndex ? 'gallery-track--reverse' : ''}`} aria-hidden={rowIndex ? 'true' : undefined}>
-							{[false, true].map((duplicate) => (
-								<div class="gallery-set" aria-hidden={duplicate ? 'true' : undefined}>
-									{visualFrames.map((frame, index) => (
-										<figure class={`gallery-frame gallery-frame--${index + 1}`}>
-											<Image
-												src={frame.image}
-												alt={rowIndex || duplicate ? '' : frame.alt}
-												widths={[240, 420, 720]}
-												sizes="(max-width: 800px) 12rem, 22vw"
-												quality={90}
-												loading="lazy"
-											/>
-											<figcaption><span>0{index + 1}</span>{frame.label}</figcaption>
-										</figure>
-									))}
-								</div>
-							))}
-						</div>
-					))}
+			<section class="stats">
+				<div class="wrap">
+					<div class="stat reveal"><div class="n">240K</div><div class="l">reproducciones en una pieza para Emobility</div></div>
+					<div class="stat reveal"><div class="n">+412%</div><div class="l">crecimiento de visualizaciones en un mes con LV</div></div>
+					<div class="stat reveal"><div class="n">$12 ≈ $90</div><div class="l">rendimiento de pauta optimizada en FORED</div></div>
 				</div>
 			</section>
 
-			<section class="work section-pad" id="trabajo" aria-labelledby="work-title">
-				<div class="section-heading reveal">
-					<p class="eyebrow">Selección de trabajo</p>
-					<h2 id="work-title">Proyectos con<br />pulso propio.</h2>
-				</div>
-
-				<div class="project-list">
-					{projects.map((project) => (
-						<article class={`project reveal ${project.className}`}>
-							<div class="project-visual" aria-hidden="true">
-								{project.image && (
-									<Image
-										class="project-cover"
-										src={project.image}
-										alt={project.alt}
-										widths={[360, 640, 864]}
-										sizes="(max-width: 800px) calc(100vw - 2.5rem), 60vw"
-										quality={90}
-										loading="lazy"
-									/>
-								)}
-								<span class="project-number">{project.number}</span>
-								<div class="visual-mark"></div>
-								<span class="visual-word">{project.client}</span>
-							</div>
-							<div class="project-info">
-								<p>{project.type}</p>
-								<h3>{project.title}</h3>
-								{project.description && <div class="project-description">{project.description}</div>}
-								{project.results && (
-									<div class="project-results">
-										{project.results.map((result) => <span>{result}</span>)}
-									</div>
-								)}
-								<span class="project-client">{project.client}</span>
-								{project.social && (
-									<a class="project-social" href={project.social.href} target="_blank" rel="noopener noreferrer">
-										<span>{project.social.label}</span>
-										{project.social.handle}
-										<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg>
-									</a>
-								)}
-							</div>
-						</article>
-					))}
+			<section id="perfil" class="about">
+				<div class="wrap">
+					<div class="reveal">
+						<span class="eyebrow">Perfil</span>
+						<h2>Convierto ideas en contenido que la gente recuerda.</h2>
+					</div>
+					<div class="reveal">
+						<p>
+							Trabajo de punta a punta: estrategia, calendario, grabación, diseño de piezas,
+							copywriting y edición. Cada publicación se piensa para que la marca se vea coherente
+							y con personalidad propia.
+						</p>
+						<p>
+							Cuento con equipo audiovisual propio (DJI Mic 2, DJI Osmo Mobile, iluminación ajustable)
+							y manejo CapCut, InShot, Canva, Premiere Pro y Photoshop.
+						</p>
+					</div>
 				</div>
 			</section>
 
-			<section class="cinematic-break" aria-label="Filosofía creativa">
-				<div class="cinematic-copy reveal">
-					<span>Imaginar.</span>
-					<strong>Crear.</strong>
-					<span>Impactar.</span>
-				</div>
-				<p class="cinematic-note reveal">Cada marca tiene algo que decir.<br />Mi trabajo es hacer que nadie pueda ignorarlo.</p>
-				<div class="marquee" aria-hidden="true">
-					<div>ESTRATEGIA · CONTENIDO · DISEÑO · MOVIMIENTO · ESTRATEGIA · CONTENIDO · DISEÑO · MOVIMIENTO ·</div>
-				</div>
-			</section>
-
-			<section class="impact section-pad" aria-label="Resultados destacados">
-				<div class="impact-intro reveal">
-					<p class="eyebrow">Cuando la creatividad funciona</p>
-					<p>Una buena idea no solo se ve bien.<br />También mueve números.</p>
-				</div>
-				<div class="metrics">
-					<div class="metric reveal"><strong>240K</strong><span>reproducciones en una pieza para Emobility</span></div>
-					<div class="metric reveal"><strong>$12</strong><span>de inversión con rendimiento comparable a $90</span></div>
-					<div class="metric reveal"><strong>360°</strong><span>estrategia, grabación, diseño, copy y edición</span></div>
+			<section id="servicios">
+				<div class="wrap">
+					<div class="sec-head reveal">
+						<span class="eyebrow">Lo que hago</span>
+						<h2>Servicios</h2>
+					</div>
+					<div class="svc-grid reveal">
+						<span class="svc">Dirección de contenido</span>
+						<span class="svc">Producción audiovisual</span>
+						<span class="svc">Identidad visual &amp; diseño</span>
+						<span class="svc">Estrategia para redes</span>
+						<span class="svc">Copywriting</span>
+						<span class="svc">Edición de video</span>
+					</div>
+					<p class="tools reveal">CapCut · InShot · Canva · Premiere Pro · Photoshop</p>
 				</div>
 			</section>
 
-			<section class="services section-pad" aria-labelledby="services-title">
-				<p class="eyebrow reveal">Lo que hago</p>
-				<h2 id="services-title" class="sr-only">Servicios creativos</h2>
-				<ul>
-					<li class="reveal"><span>01</span>Dirección de contenido</li>
-					<li class="reveal"><span>02</span>Producción audiovisual</li>
-					<li class="reveal"><span>03</span>Identidad visual & diseño</li>
-					<li class="reveal"><span>04</span>Estrategia para redes</li>
-					<li class="reveal"><span>05</span>Copywriting</li>
-				</ul>
-				<p class="tools reveal">CapCut · InShot · Canva · Premiere Pro · Photoshop</p>
-			</section>
-
-			<section class="contact section-pad" id="contacto">
-				<div class="contact-grid">
-					<div class="contact-intro">
-						<p class="eyebrow reveal">¿Creamos algo inolvidable?</p>
-						<a class="contact-title reveal" href="mailto:anitapauly91@gmail.com">
-							Cuéntame<br /><em>tu idea.</em>
-							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
-						</a>
-						<div class="contact-meta reveal">
+			<section id="contacto" class="contact">
+				<div class="wrap">
+					<div class="reveal">
+						<span class="eyebrow">¿Creamos algo juntas?</span>
+						<h2>Cuéntame <em>tu idea.</em></h2>
+						<div class="c-list">
 							<a href="mailto:anitapauly91@gmail.com">anitapauly91@gmail.com</a>
 							<a href="tel:+593994195423">+593 99 419 5423</a>
 							<span>Loja, Ecuador</span>
 						</div>
-						<div class="contact-social reveal">
+						<div class="c-social">
 							<a href="https://www.instagram.com/anita_sarmiento1026" target="_blank" rel="noopener noreferrer">Instagram</a>
 							<a href="https://www.behance.net/anitasarmiento" target="_blank" rel="noopener noreferrer">Behance</a>
 						</div>
 					</div>
 
-					<form
-						class="contact-form reveal"
-						action="https://formsubmit.co/anitapauly91@gmail.com"
-						method="POST"
-					>
+					<form class="card-form reveal" action="https://formsubmit.co/anitapauly91@gmail.com" method="POST">
 						<input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio" />
 						<input type="hidden" name="_template" value="table" />
 						<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-
 						<label class="field">
 							<span>Nombre</span>
 							<input type="text" name="name" required placeholder="Tu nombre" />
@@ -287,62 +214,36 @@ const visualFrames = [
 							<span>Mensaje</span>
 							<textarea name="message" rows="4" required placeholder="Cuéntame sobre tu marca o proyecto"></textarea>
 						</label>
-						<button type="submit">
-							Enviar mensaje
-							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6"></path></svg>
-						</button>
+						<button type="submit">Enviar mensaje</button>
 					</form>
 				</div>
 			</section>
 		</main>
 
 		<footer>
-			<span>© {new Date().getFullYear()} Ana Paulina</span>
-			<span>Contenido · Estrategia · Diseño</span>
-			<a href="#inicio">Volver arriba ↑</a>
+			<div class="wrap">
+				<span>© {new Date().getFullYear()} Ana Paulina Sarmiento</span>
+				<span>Contenido · Estrategia · Diseño</span>
+				<a href="#top">Volver arriba ↑</a>
+			</div>
 		</footer>
 
 		<script>
-			const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-			const reveals = document.querySelectorAll('.reveal');
-
-			if (reducedMotion) {
-				reveals.forEach((element) => element.classList.add('is-visible'));
+			const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			const items = document.querySelectorAll('.reveal');
+			if (reduce) {
+				items.forEach((el) => el.classList.add('in'));
 			} else {
-				const observer = new IntersectionObserver(
-					(entries) => entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							entry.target.classList.add('is-visible');
-							observer.unobserve(entry.target);
+				const io = new IntersectionObserver(
+					(entries) => entries.forEach((e) => {
+						if (e.isIntersecting) {
+							e.target.classList.add('in');
+							io.unobserve(e.target);
 						}
 					}),
-					{ threshold: 0.12 },
+					{ threshold: 0.15 },
 				);
-				reveals.forEach((element) => observer.observe(element));
-
-				const light = document.querySelector<HTMLElement>('.cursor-light');
-				const galleries = document.querySelectorAll<HTMLElement>('.gallery-track');
-				let galleryFrame = 0;
-				const moveGallery = () => {
-					galleryFrame = 0;
-					galleries.forEach((gallery, index) => {
-						const loopWidth = gallery.scrollWidth / 2;
-						if (!loopWidth) return;
-						const progress = (window.scrollY * 0.32) % loopWidth;
-						const offset = index ? -loopWidth + progress : -progress;
-						gallery.style.setProperty('--gallery-x', `${offset}px`);
-					});
-				};
-				const requestGalleryMove = () => {
-					if (!galleryFrame) galleryFrame = requestAnimationFrame(moveGallery);
-				};
-				moveGallery();
-				window.addEventListener('scroll', requestGalleryMove, { passive: true });
-				window.addEventListener('resize', requestGalleryMove, { passive: true });
-				window.addEventListener('pointermove', (event) => {
-					light?.style.setProperty('--x', `${event.clientX}px`);
-					light?.style.setProperty('--y', `${event.clientY}px`);
-				}, { passive: true });
+				items.forEach((el) => io.observe(el));
 			}
 		</script>
 	</body>
