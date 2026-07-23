@@ -1629,3 +1629,137 @@ footer {
 a:focus-visible {
 	outline-color: #c49a52;
 }
+
+/* ============================================================
+   GLASSMORPHISM — frosted surfaces (treatment only, same colors)
+   ============================================================ */
+
+/* floating glass navbar */
+.site-header {
+	position: fixed;
+	top: clamp(0.6rem, 2vw, 1.1rem);
+	left: clamp(0.6rem, 2vw, 1.1rem);
+	right: clamp(0.6rem, 2vw, 1.1rem);
+	width: auto;
+	padding: 0.6rem 0.9rem 0.6rem 1.1rem;
+	border: 1px solid rgba(255, 255, 255, 0.55);
+	border-radius: 999px;
+	background: rgba(255, 247, 242, 0.42);
+	backdrop-filter: blur(16px) saturate(1.4);
+	-webkit-backdrop-filter: blur(16px) saturate(1.4);
+	box-shadow: 0 1rem 2.5rem rgba(120, 70, 60, 0.12);
+}
+
+.monogram {
+	width: 2.6rem;
+	height: 2.6rem;
+	background: rgba(255, 255, 255, 0.35);
+}
+
+/* glass project info card */
+.project-info {
+	padding: clamp(1.6rem, 3vw, 2.5rem);
+	border: 1px solid rgba(255, 255, 255, 0.55);
+	border-radius: 1.4rem;
+	background: rgba(255, 255, 255, 0.34);
+	backdrop-filter: blur(12px) saturate(1.2);
+	-webkit-backdrop-filter: blur(12px) saturate(1.2);
+	box-shadow: 0 1.5rem 3.5rem rgba(120, 70, 60, 0.1);
+}
+
+.project-visual {
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-radius: 1.4rem;
+}
+
+/* glass metric tiles */
+.metrics {
+	gap: clamp(0.8rem, 1.6vw, 1.4rem);
+	border-top: none;
+}
+
+.metric,
+.metric:first-child {
+	padding: clamp(1.8rem, 3vw, 2.6rem);
+	border-right: none;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 1.3rem;
+	background: rgba(255, 255, 255, 0.26);
+	backdrop-filter: blur(12px) saturate(1.2);
+	-webkit-backdrop-filter: blur(12px) saturate(1.2);
+	box-shadow: 0 1.2rem 3rem rgba(120, 70, 60, 0.12);
+}
+
+.metric span {
+	max-width: none;
+}
+
+/* glass gallery frames */
+.gallery-frame img {
+	border: 1px solid rgba(255, 255, 255, 0.55);
+	border-radius: 0.9rem;
+	box-shadow: 0 1rem 2.5rem rgba(90, 48, 44, 0.22);
+}
+
+/* stronger glass contact form */
+.contact-form {
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	border-radius: 1.6rem;
+	background: rgba(255, 255, 255, 0.34);
+	backdrop-filter: blur(18px) saturate(1.3);
+	-webkit-backdrop-filter: blur(18px) saturate(1.3);
+	box-shadow: 0 1.5rem 4rem rgba(120, 70, 60, 0.14);
+}
+
+.contact-form input,
+.contact-form textarea {
+	border-radius: 0.9rem;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+}
+
+/* glass social pill on cards */
+.project-social {
+	background: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* personal social pills */
+.contact-social {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8rem;
+	margin-top: 1.4rem;
+}
+
+.contact-social a {
+	padding: 0.65rem 1.3rem;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	color: #4b3336;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.contact-social a:hover {
+	background: #c49a52;
+	border-color: #c49a52;
+	color: #3a2a18;
+}
+
+@media (max-width: 800px) {
+	.metric,
+	.metric:first-child {
+		border-radius: 1.1rem;
+	}
+}
