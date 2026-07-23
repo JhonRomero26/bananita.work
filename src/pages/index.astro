@@ -5,14 +5,12 @@ import { Image } from 'astro:assets';
 import hcEvent from '../assets/hc/event-coverage.jpeg';
 import hcHotel from '../assets/hc/hotel-space.jpeg';
 import hcOnCamera from '../assets/hc/on-camera.jpeg';
-import hcCover from '../assets/hc/project-cover.png';
 import hcInterview from '../assets/hc/street-interview.jpeg';
 import hcTrend from '../assets/hc/trend-story.jpeg';
 import lvBody from '../assets/lv/body-campaign.webp';
 import lvLaser from '../assets/lv/laser-campaign.webp';
 import lvMyth from '../assets/lv/myth-reality.webp';
 import lvPigmentation from '../assets/lv/pigmentation-content.webp';
-import lvCover from '../assets/lv/project-cover.png';
 import lvSkin from '../assets/lv/skin-conscious.webp';
 
 const projects = [
@@ -21,24 +19,24 @@ const projects = [
 		client: 'LV Lolita Vintimilla',
 		title: 'Belleza que se comunica con intención.',
 		type: 'Dirección de contenido · Identidad visual',
-		className: 'project--beauty project--real project--poster',
-		image: lvCover,
-		alt: 'Portada del proyecto LV Estética Avanzada con Lolita Vintimilla',
-		poster: true,
+		className: 'project--beauty project--real',
+		image: lvSkin,
+		alt: 'Arte de cuidado facial diseñado para LV Estética Avanzada',
 		description: 'Publicidad, diseño de artes, estrategia editorial y gestión diaria de redes sociales para construir una presencia coherente y educativa.',
 		results: ['+412% visualizaciones', '13,6 mil en 30 días', '+1.384% alcance nuevo'],
+		social: { label: 'Instagram', handle: '@lv_estetica_avanzada_', href: 'https://www.instagram.com/lv_estetica_avanzada_/' },
 	},
 	{
 		number: '02',
 		client: 'Hotel Carrión',
 		title: 'El hotel dejó de ser escenario y empezó a tener rostro.',
 		type: 'Contenido para TikTok · Talento frente a cámara',
-		className: 'project--hotel project--real project--poster',
-		image: hcCover,
-		alt: 'Portada del proyecto Hotel Carrión con Ana Paulina frente a cámara',
-		poster: true,
+		className: 'project--hotel project--real',
+		image: hcOnCamera,
+		alt: 'Ana Paulina presentando contenido para Hotel Carrión',
 		description: 'Protagonismo frente a cámara, grabación en instalaciones y exteriores, adaptación de tendencias y edición dinámica para la campaña de TikTok del hotel.',
 		results: ['8 piezas para TikTok', 'Frente a cámara', 'Grabación + edición'],
+		social: { label: 'TikTok', handle: '@hotelcarrionloja', href: 'https://www.tiktok.com/@hotelcarrionloja' },
 	},
 	{
 		number: '03',
@@ -53,6 +51,7 @@ const projects = [
 		title: 'Tecnología convertida en una historia humana.',
 		type: 'Contenido digital · Video',
 		className: 'project--motion',
+		social: { label: 'TikTok', handle: '@emobilityloja', href: 'https://www.tiktok.com/@emobilityloja' },
 	},
 ];
 
@@ -160,16 +159,7 @@ const visualFrames = [
 					{projects.map((project) => (
 						<article class={`project reveal ${project.className}`}>
 							<div class="project-visual" aria-hidden="true">
-								{project.image && project.poster && (
-									<Image
-										class="project-cover"
-										src={project.image}
-										alt={project.alt}
-										quality={95}
-										loading="lazy"
-									/>
-								)}
-								{project.image && !project.poster && (
+								{project.image && (
 									<Image
 										class="project-cover"
 										src={project.image}
@@ -194,6 +184,13 @@ const visualFrames = [
 									</div>
 								)}
 								<span class="project-client">{project.client}</span>
+								{project.social && (
+									<a class="project-social" href={project.social.href} target="_blank" rel="noopener noreferrer">
+										<span>{project.social.label}</span>
+										{project.social.handle}
+										<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+									</a>
+								)}
 							</div>
 						</article>
 					))}
