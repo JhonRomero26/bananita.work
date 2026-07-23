@@ -95,14 +95,14 @@ const stripRowB = [emPromo, lvMyth, hcTrend, emBrand, lvBody];
 			<div class="strip" aria-hidden="true">
 				<div class="strip-row strip-row-a">
 					<div class="strip-track">
-						{[...stripRowA, ...stripRowA].map((img) => (
+						{[...stripRowA, ...stripRowA, ...stripRowA, ...stripRowA].map((img) => (
 							<Image src={img} alt="" widths={[220, 440]} sizes="220px" quality={82} loading="lazy" />
 						))}
 					</div>
 				</div>
 				<div class="strip-row strip-row-b">
 					<div class="strip-track">
-						{[...stripRowB, ...stripRowB].map((img) => (
+						{[...stripRowB, ...stripRowB, ...stripRowB, ...stripRowB].map((img) => (
 							<Image src={img} alt="" widths={[220, 440]} sizes="220px" quality={82} loading="lazy" />
 						))}
 					</div>

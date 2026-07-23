@@ -248,12 +248,15 @@ section {
 
 .strip-row {
 	overflow: hidden;
-	transform: rotate(-2.5deg) scale(1.06);
 }
 
-.strip-row + .strip-row {
-	margin-top: clamp(1.2rem, 2.5vw, 2rem);
-	transform: rotate(2.5deg) scale(1.06);
+.strip-row-a {
+	transform: rotate(-4deg) scale(1.08);
+}
+
+.strip-row-b {
+	margin-top: clamp(1.4rem, 3vw, 2.4rem);
+	transform: rotate(4deg) scale(1.08);
 }
 
 .strip-track {
@@ -263,11 +266,11 @@ section {
 }
 
 .strip-row-a .strip-track {
-	animation: slide-left 40s linear infinite;
+	animation: slide-left 50s linear infinite;
 }
 
 .strip-row-b .strip-track {
-	animation: slide-right 40s linear infinite;
+	animation: slide-right 50s linear infinite;
 }
 
 .strip img {
@@ -279,13 +282,13 @@ section {
 
 @keyframes slide-left {
 	to {
-		transform: translateX(-50%);
+		transform: translateX(-25%);
 	}
 }
 
 @keyframes slide-right {
 	from {
-		transform: translateX(-50%);
+		transform: translateX(-25%);
 	}
 	to {
 		transform: translateX(0);
