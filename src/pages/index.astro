@@ -2,6 +2,11 @@
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { Image } from 'astro:assets';
+import emBrand from '../assets/em/brand.jpeg';
+import emCover from '../assets/em/cover.jpeg';
+import emPromo from '../assets/em/promo.jpeg';
+import emScooter from '../assets/em/scooter.jpeg';
+import emTestdrive from '../assets/em/testdrive.jpeg';
 import hcEvent from '../assets/hc/event-coverage.jpeg';
 import hcHotel from '../assets/hc/hotel-space.jpeg';
 import hcOnCamera from '../assets/hc/on-camera.jpeg';
@@ -49,8 +54,12 @@ const projects = [
 		number: '04',
 		client: 'Emobility',
 		title: 'Tecnología convertida en una historia humana.',
-		type: 'Contenido digital · Video',
-		className: 'project--motion',
+		type: 'Comunicación digital · Foto y video',
+		className: 'project--motion project--real',
+		image: emCover,
+		alt: 'Contenido de promoción de movilidad eléctrica para Emobility',
+		description: 'Producción y edición de fotografías y videos, y comunicación clara de productos de movilidad eléctrica para acercar la marca a más público.',
+		results: ['240K reproducciones', 'Foto + video', 'Comunicación de producto'],
 		social: { label: 'TikTok', handle: '@emobilityloja', href: 'https://www.tiktok.com/@emobilityloja' },
 	},
 ];
@@ -66,6 +75,10 @@ const visualFrames = [
 	{ image: hcEvent, label: 'Cobertura de eventos', alt: 'Cobertura audiovisual de un evento en Hotel Carrión' },
 	{ image: hcHotel, label: 'Recorrido de espacios', alt: 'Contenido audiovisual de los espacios del Hotel Carrión' },
 	{ image: hcInterview, label: 'Entrevistas', alt: 'Entrevista en cámara para contenido del Hotel Carrión' },
+	{ image: emScooter, label: 'Producto en acción', alt: 'Video de un scooter eléctrico ES2 en movimiento para Emobility' },
+	{ image: emPromo, label: 'Campaña de temporada', alt: 'Contenido de promoción navideña de movilidad eléctrica para Emobility' },
+	{ image: emTestdrive, label: 'Prueba de manejo', alt: 'Contenido de prueba de manejo de un vehículo eléctrico para Emobility' },
+	{ image: emBrand, label: 'Voz de marca', alt: 'Presentador comunicando productos de Emobility' },
 ];
 ---
 
