@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap');
 
 :root {
 	--ink: #140d0c;
@@ -509,7 +509,7 @@ nav a:not(.nav-contact):hover {
 
 .project-list {
 	display: grid;
-	gap: clamp(6rem, 13vw, 12rem);
+	gap: clamp(3rem, 6vw, 5.5rem);
 }
 
 .project {
@@ -536,7 +536,7 @@ nav a:not(.nav-contact):hover {
 .project-visual {
 	position: relative;
 	display: grid;
-	min-height: min(66vw, 42rem);
+	min-height: min(40vw, 26rem);
 	place-items: center;
 	overflow: hidden;
 	background: var(--wood);
@@ -964,6 +964,32 @@ nav a:not(.nav-contact):hover {
 	color: var(--cream);
 }
 
+.contact-social {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8rem;
+	margin-top: 1.4rem;
+}
+
+.contact-social a {
+	padding: 0.65rem 1.3rem;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	color: var(--cream);
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.contact-social a:hover {
+	background: var(--rust);
+	border-color: var(--rust);
+	color: #170c0a;
+}
+
 .contact-grid {
 	display: grid;
 	grid-template-columns: 1.1fr 0.9fr;
@@ -1226,7 +1252,7 @@ a:focus-visible {
 	}
 
 	.project-visual {
-		min-height: 110vw;
+		min-height: 75vw;
 	}
 
 	.impact-intro {
@@ -1292,474 +1318,5 @@ a:focus-visible {
 
 	.gallery-track {
 		transform: none;
-	}
-}
-
-/* ============================================================
-   BEAUTY THEME — soft cream, powder rose & gold reskin
-   (visual layer only; layout untouched)
-   ============================================================ */
-:root {
-	--serif: 'Cormorant Garamond', 'Italiana', serif;
-}
-
-html {
-	background: #f8f0ea;
-}
-
-body {
-	background:
-		radial-gradient(circle at 78% 6%, rgba(217, 138, 134, 0.22), transparent 34rem),
-		radial-gradient(circle at 4% 42%, rgba(196, 154, 82, 0.14), transparent 30rem),
-		linear-gradient(160deg, #f9f2ec 0%, #f4e7df 55%, #f9f2ec 100%);
-	color: #4b3336;
-	font-weight: 400;
-}
-
-::selection {
-	background: #d98a86;
-	color: #fff;
-}
-
-.grain {
-	opacity: 0.04;
-}
-
-.cursor-light {
-	background: radial-gradient(430px circle at var(--x) var(--y), rgba(217, 138, 134, 0.18), transparent 70%);
-}
-
-/* header / nav */
-.monogram {
-	border-color: rgba(75, 51, 54, 0.22);
-	color: #4b3336;
-}
-
-nav a:not(.nav-contact):hover {
-	color: #35232a;
-}
-
-.nav-contact {
-	background: #c49a52;
-	border-color: #c49a52;
-	color: #3a2a18;
-}
-
-.nav-contact:hover {
-	background: #4b3336;
-	border-color: #4b3336;
-	color: #f8f0ea;
-}
-
-/* hero */
-.hero::before {
-	background:
-		linear-gradient(150deg, rgba(255, 255, 255, 0.28), transparent 45%),
-		radial-gradient(circle at 34% 28%, #f6d3c4 0, #e79f96 32%, #cf8a83 64%, #c49a52 100%);
-	box-shadow: -2rem 3rem 9rem rgba(207, 138, 131, 0.28);
-}
-
-.hero::after {
-	border-color: rgba(75, 51, 54, 0.18);
-}
-
-.hero h1 {
-	color: #4b3336;
-	text-shadow: none;
-}
-
-.hero-name {
-	-webkit-text-stroke: 1px rgba(75, 51, 54, 0.1);
-}
-
-.hero-accent {
-	color: #c49a52;
-}
-
-.hero-kicker {
-	color: #a1897f;
-}
-
-.hero-footer p {
-	color: #8a726d;
-}
-
-.round-link {
-	background: #c49a52;
-	border-color: #c49a52;
-	color: #3a2a18;
-}
-
-.round-link:hover {
-	background: #4b3336;
-	color: #f8f0ea;
-}
-
-.hero-orbit {
-	color: #a1897f;
-}
-
-.hero-orbit span {
-	border-color: rgba(75, 51, 54, 0.16);
-}
-
-/* eyebrows */
-.eyebrow {
-	color: #c49a52;
-}
-
-/* manifesto */
-.manifesto {
-	border-top-color: rgba(75, 51, 54, 0.14);
-	background: radial-gradient(circle at 88% 55%, rgba(217, 138, 134, 0.16), transparent 24rem);
-}
-
-.manifesto::after {
-	border-color: rgba(217, 138, 134, 0.4);
-	box-shadow: 0 0 0 3rem rgba(196, 154, 82, 0.05);
-}
-
-.manifesto h2 em,
-.contact-title em {
-	color: #c49a52;
-}
-
-.manifesto-copy {
-	color: #8a726d;
-}
-
-/* work */
-.work {
-	background: #f2e5dc;
-	color: #4b3336;
-}
-
-.work .eyebrow {
-	color: #a87f3a;
-}
-
-/* scroll gallery */
-.scroll-gallery {
-	background: linear-gradient(115deg, #e7b7ad 0%, #d98a86 100%);
-}
-
-.gallery-heading .eyebrow {
-	color: #fff3ee;
-}
-
-.gallery-heading h2 {
-	color: #3a2320;
-}
-
-.gallery-heading em {
-	color: #7a3f39;
-}
-
-.gallery-frame img {
-	border-color: rgba(255, 244, 238, 0.6);
-	filter: saturate(1.02) contrast(1.03);
-}
-
-.gallery-frame figcaption {
-	color: #5a302c;
-}
-
-/* project decorative blocks */
-.project-number,
-.visual-word {
-	color: rgba(74, 47, 48, 0.62);
-}
-
-.project--beauty .project-visual {
-	background: radial-gradient(circle at 50% 45%, #f7ddd0 0 18%, #e6a89b 19% 34%, #cf8a83 35% 56%, #b3766e 57%);
-}
-
-.project--campaign .project-visual {
-	background: linear-gradient(135deg, #e7a99a 0 25%, #f2e5dc 25% 58%, #d98a86 58% 73%, #c49a52 73%);
-}
-
-.project--motion .project-visual {
-	background: repeating-linear-gradient(115deg, #ead0c8 0 4%, #d98a86 4% 8%, #c49a52 8% 12%, #ecdfd6 12% 17%);
-}
-
-/* cinematic break */
-.cinematic-break {
-	background:
-		linear-gradient(115deg, rgba(246, 226, 223, 0.92), rgba(217, 138, 134, 0.5)),
-		repeating-linear-gradient(100deg, #f3e0da 0 8%, #e7b3ab 8% 9%, #f6ece7 9% 18%);
-}
-
-.cinematic-break::before {
-	border-color: rgba(75, 51, 54, 0.2);
-	box-shadow: 0 0 0 3rem rgba(217, 138, 134, 0.14), 0 0 10rem rgba(196, 154, 82, 0.4);
-}
-
-.cinematic-copy {
-	color: #4b3336;
-}
-
-.cinematic-copy strong {
-	color: #c49a52;
-}
-
-.cinematic-note {
-	color: #7a6560;
-}
-
-.marquee {
-	color: #a87f3a;
-	border-color: rgba(75, 51, 54, 0.14);
-}
-
-/* impact */
-.impact {
-	background: linear-gradient(135deg, #e7b7ad 0%, #c49a52 100%);
-}
-
-.impact .eyebrow {
-	color: #fff3ee;
-}
-
-.impact-intro > p:last-child {
-	color: #4b2f2c;
-}
-
-.metrics {
-	border-top-color: rgba(75, 51, 54, 0.2);
-}
-
-.metric {
-	border-right-color: rgba(75, 51, 54, 0.2);
-}
-
-.metric strong {
-	color: #4b2f2c;
-	text-shadow: none;
-}
-
-.metric span {
-	color: #6b453f;
-}
-
-/* services */
-.services {
-	background: #f2e5dc;
-}
-
-.services li {
-	border-bottom-color: rgba(75, 51, 54, 0.14);
-	color: #4b3336;
-}
-
-.services li:hover {
-	color: #c49a52;
-}
-
-.services li span {
-	color: #c49a52;
-}
-
-.tools {
-	color: #a1897f;
-}
-
-/* contact */
-.contact {
-	background:
-		radial-gradient(circle at 75% 45%, rgba(217, 138, 134, 0.3), transparent 28rem),
-		#f8f0ea;
-}
-
-.contact-title:hover {
-	color: #c49a52;
-}
-
-.contact-meta {
-	border-top-color: rgba(75, 51, 54, 0.14);
-	color: #a1897f;
-}
-
-.contact-meta a:hover {
-	color: #4b3336;
-}
-
-.contact-form {
-	border-color: rgba(75, 51, 54, 0.14);
-	background: rgba(255, 255, 255, 0.5);
-}
-
-.field span {
-	color: #c49a52;
-}
-
-.contact-form input,
-.contact-form textarea {
-	border-color: rgba(75, 51, 54, 0.16);
-	background: rgba(255, 255, 255, 0.72);
-	color: #4b3336;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-	color: rgba(75, 51, 54, 0.4);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-	border-color: #c49a52;
-}
-
-.contact-form button {
-	background: #c49a52;
-	color: #3a2a18;
-}
-
-.contact-form button:hover {
-	background: #4b3336;
-	color: #f8f0ea;
-}
-
-/* footer */
-footer {
-	background: #f2e5dc;
-	border-top-color: rgba(75, 51, 54, 0.14);
-	color: #a1897f;
-}
-
-a:focus-visible {
-	outline-color: #c49a52;
-}
-
-/* ============================================================
-   GLASSMORPHISM — frosted surfaces (treatment only, same colors)
-   ============================================================ */
-
-/* floating glass navbar */
-.site-header {
-	position: fixed;
-	top: clamp(0.6rem, 2vw, 1.1rem);
-	left: clamp(0.6rem, 2vw, 1.1rem);
-	right: clamp(0.6rem, 2vw, 1.1rem);
-	width: auto;
-	padding: 0.6rem 0.9rem 0.6rem 1.1rem;
-	border: 1px solid rgba(255, 255, 255, 0.55);
-	border-radius: 999px;
-	background: rgba(255, 247, 242, 0.42);
-	backdrop-filter: blur(16px) saturate(1.4);
-	-webkit-backdrop-filter: blur(16px) saturate(1.4);
-	box-shadow: 0 1rem 2.5rem rgba(120, 70, 60, 0.12);
-}
-
-.monogram {
-	width: 2.6rem;
-	height: 2.6rem;
-	background: rgba(255, 255, 255, 0.35);
-}
-
-/* glass project info card */
-.project-info {
-	padding: clamp(1.6rem, 3vw, 2.5rem);
-	border: 1px solid rgba(255, 255, 255, 0.55);
-	border-radius: 1.4rem;
-	background: rgba(255, 255, 255, 0.34);
-	backdrop-filter: blur(12px) saturate(1.2);
-	-webkit-backdrop-filter: blur(12px) saturate(1.2);
-	box-shadow: 0 1.5rem 3.5rem rgba(120, 70, 60, 0.1);
-}
-
-.project-visual {
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	border-radius: 1.4rem;
-}
-
-/* glass metric tiles */
-.metrics {
-	gap: clamp(0.8rem, 1.6vw, 1.4rem);
-	border-top: none;
-}
-
-.metric,
-.metric:first-child {
-	padding: clamp(1.8rem, 3vw, 2.6rem);
-	border-right: none;
-	border: 1px solid rgba(255, 255, 255, 0.5);
-	border-radius: 1.3rem;
-	background: rgba(255, 255, 255, 0.26);
-	backdrop-filter: blur(12px) saturate(1.2);
-	-webkit-backdrop-filter: blur(12px) saturate(1.2);
-	box-shadow: 0 1.2rem 3rem rgba(120, 70, 60, 0.12);
-}
-
-.metric span {
-	max-width: none;
-}
-
-/* glass gallery frames */
-.gallery-frame img {
-	border: 1px solid rgba(255, 255, 255, 0.55);
-	border-radius: 0.9rem;
-	box-shadow: 0 1rem 2.5rem rgba(90, 48, 44, 0.22);
-}
-
-/* stronger glass contact form */
-.contact-form {
-	border: 1px solid rgba(255, 255, 255, 0.6);
-	border-radius: 1.6rem;
-	background: rgba(255, 255, 255, 0.34);
-	backdrop-filter: blur(18px) saturate(1.3);
-	-webkit-backdrop-filter: blur(18px) saturate(1.3);
-	box-shadow: 0 1.5rem 4rem rgba(120, 70, 60, 0.14);
-}
-
-.contact-form input,
-.contact-form textarea {
-	border-radius: 0.9rem;
-	background: rgba(255, 255, 255, 0.5);
-	backdrop-filter: blur(6px);
-	-webkit-backdrop-filter: blur(6px);
-}
-
-/* glass social pill on cards */
-.project-social {
-	background: rgba(255, 255, 255, 0.4);
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-	border-color: rgba(255, 255, 255, 0.6);
-}
-
-/* personal social pills */
-.contact-social {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.8rem;
-	margin-top: 1.4rem;
-}
-
-.contact-social a {
-	padding: 0.65rem 1.3rem;
-	border: 1px solid rgba(255, 255, 255, 0.6);
-	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.4);
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-	color: #4b3336;
-	font-size: 0.72rem;
-	font-weight: 600;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	cursor: pointer;
-	transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
-}
-
-.contact-social a:hover {
-	background: #c49a52;
-	border-color: #c49a52;
-	color: #3a2a18;
-}
-
-@media (max-width: 800px) {
-	.metric,
-	.metric:first-child {
-		border-radius: 1.1rem;
 	}
 }
