@@ -21,9 +21,10 @@ const projects = [
 		client: 'LV Lolita Vintimilla',
 		title: 'Belleza que se comunica con intención.',
 		type: 'Dirección de contenido · Identidad visual',
-		className: 'project--beauty project--real project--cover',
+		className: 'project--beauty project--real project--poster',
 		image: lvCover,
 		alt: 'Portada del proyecto LV Estética Avanzada con Lolita Vintimilla',
+		poster: true,
 		description: 'Publicidad, diseño de artes, estrategia editorial y gestión diaria de redes sociales para construir una presencia coherente y educativa.',
 		results: ['+412% visualizaciones', '13,6 mil en 30 días', '+1.384% alcance nuevo'],
 	},
@@ -32,9 +33,10 @@ const projects = [
 		client: 'Hotel Carrión',
 		title: 'El hotel dejó de ser escenario y empezó a tener rostro.',
 		type: 'Contenido para TikTok · Talento frente a cámara',
-		className: 'project--hotel project--real project--cover',
+		className: 'project--hotel project--real project--poster',
 		image: hcCover,
 		alt: 'Portada del proyecto Hotel Carrión con Ana Paulina frente a cámara',
+		poster: true,
 		description: 'Protagonismo frente a cámara, grabación en instalaciones y exteriores, adaptación de tendencias y edición dinámica para la campaña de TikTok del hotel.',
 		results: ['8 piezas para TikTok', 'Frente a cámara', 'Grabación + edición'],
 	},
@@ -130,7 +132,14 @@ const visualFrames = [
 								<div class="gallery-set" aria-hidden={duplicate ? 'true' : undefined}>
 									{visualFrames.map((frame, index) => (
 										<figure class={`gallery-frame gallery-frame--${index + 1}`}>
-											<Image src={frame.image} alt={rowIndex || duplicate ? '' : frame.alt} width={420} height={520} loading="lazy" />
+											<Image
+												src={frame.image}
+												alt={rowIndex || duplicate ? '' : frame.alt}
+												widths={[240, 420, 720]}
+												sizes="(max-width: 800px) 12rem, 22vw"
+												quality={90}
+												loading="lazy"
+											/>
 											<figcaption><span>0{index + 1}</span>{frame.label}</figcaption>
 										</figure>
 									))}
@@ -151,7 +160,26 @@ const visualFrames = [
 					{projects.map((project) => (
 						<article class={`project reveal ${project.className}`}>
 							<div class="project-visual" aria-hidden="true">
-								{project.image && <Image class="project-cover" src={project.image} alt={project.alt} width={900} height={1125} loading="lazy" />}
+								{project.image && project.poster && (
+									<Image
+										class="project-cover"
+										src={project.image}
+										alt={project.alt}
+										quality={95}
+										loading="lazy"
+									/>
+								)}
+								{project.image && !project.poster && (
+									<Image
+										class="project-cover"
+										src={project.image}
+										alt={project.alt}
+										widths={[360, 640, 864]}
+										sizes="(max-width: 800px) calc(100vw - 2.5rem), 60vw"
+										quality={90}
+										loading="lazy"
+									/>
+								)}
 								<span class="project-number">{project.number}</span>
 								<div class="visual-mark"></div>
 								<span class="visual-word">{project.client}</span>

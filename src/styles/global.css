@@ -561,9 +561,46 @@ nav a:not(.nav-contact):hover {
 	display: none;
 }
 
-.project--cover .project-visual {
-	min-height: 0;
-	aspect-ratio: 4 / 3;
+.project--poster .project-visual {
+	min-height: min(58vw, 38rem);
+	background:
+		radial-gradient(circle at 76% 22%, rgba(240, 138, 99, 0.58), transparent 14rem),
+		linear-gradient(145deg, #2b1512, #7d3026);
+}
+
+.project--poster .project-visual::after {
+	content: 'CASE STUDY';
+	display: block;
+	top: 50%;
+	right: -0.32em;
+	color: rgba(255, 237, 220, 0.08);
+	font-family: var(--sans);
+	font-size: clamp(5rem, 12vw, 12rem);
+	font-weight: 600;
+	letter-spacing: -0.07em;
+	line-height: 0.8;
+	transform: translateY(-50%) rotate(90deg);
+}
+
+.project--poster .project-cover {
+	top: 50%;
+	left: 50%;
+	inset: auto;
+	width: min(68%, 32rem);
+	height: auto;
+	border: 1px solid rgba(255, 244, 230, 0.5);
+	box-shadow: 0 2rem 6rem rgba(23, 7, 5, 0.52);
+	transform: translate(-50%, -50%) rotate(-2deg);
+}
+
+.project--hotel.project--poster .project-visual {
+	background:
+		radial-gradient(circle at 20% 75%, rgba(38, 215, 201, 0.28), transparent 16rem),
+		linear-gradient(145deg, #08101e, #173570);
+}
+
+.project--hotel.project--poster .project-cover {
+	transform: translate(-50%, -50%) rotate(2deg);
 }
 
 .project:hover .project-visual::before {
@@ -1064,6 +1101,14 @@ a:focus-visible {
 
 	.project-visual {
 		min-height: 110vw;
+	}
+
+	.project--poster .project-visual {
+		min-height: 82vw;
+	}
+
+	.project--poster .project-cover {
+		width: 82%;
 	}
 
 	.impact-intro {
