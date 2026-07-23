@@ -235,15 +235,46 @@ const visualFrames = [
 			</section>
 
 			<section class="contact section-pad" id="contacto">
-				<p class="eyebrow reveal">¿Creamos algo inolvidable?</p>
-				<a class="contact-title reveal" href="mailto:ana.sarmiento26@hotmail.com">
-					Cuéntame<br /><em>tu idea.</em>
-					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
-				</a>
-				<div class="contact-meta reveal">
-					<a href="mailto:ana.sarmiento26@hotmail.com">ana.sarmiento26@hotmail.com</a>
-					<a href="tel:+593994195423">+593 99 419 5423</a>
-					<span>Loja, Ecuador</span>
+				<div class="contact-grid">
+					<div class="contact-intro">
+						<p class="eyebrow reveal">¿Creamos algo inolvidable?</p>
+						<a class="contact-title reveal" href="mailto:anitapauly91@gmail.com">
+							Cuéntame<br /><em>tu idea.</em>
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
+						</a>
+						<div class="contact-meta reveal">
+							<a href="mailto:anitapauly91@gmail.com">anitapauly91@gmail.com</a>
+							<a href="tel:+593994195423">+593 99 419 5423</a>
+							<span>Loja, Ecuador</span>
+						</div>
+					</div>
+
+					<form
+						class="contact-form reveal"
+						action="https://formsubmit.co/anitapauly91@gmail.com"
+						method="POST"
+					>
+						<input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio" />
+						<input type="hidden" name="_template" value="table" />
+						<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+						<label class="field">
+							<span>Nombre</span>
+							<input type="text" name="name" required placeholder="Tu nombre" />
+						</label>
+						<label class="field">
+							<span>Correo</span>
+							<input type="email" name="email" required placeholder="tucorreo@ejemplo.com" />
+						</label>
+						<label class="field">
+							<span>Mensaje</span>
+							<textarea name="message" rows="4" required placeholder="Cuéntame sobre tu marca o proyecto"></textarea>
+						</label>
+						<button type="submit">
+							Enviar mensaje
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6"></path></svg>
+						</button>
+					</form>
 				</div>
 			</section>
 		</main>
